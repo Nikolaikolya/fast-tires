@@ -1,0 +1,40 @@
+.footer {
+  background-color: #323232;
+}
+
+.footer-wrapper {
+  border-bottom: 1px solid #474747;
+}
+
+.footer-catalog__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ECECEC;
+}
+
+.footer-catalog-list__link,
+.footer-information__link {
+  font-size: 15px;
+  line-height: 23px;
+  color: #9E9E9E;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+}
+
+.footer-information__link {
+  text-decoration: underline;
+}
+
+.router-link-active {
+  color: #FADE56;
+}
+
+.footer-text {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 23px;
+  color: #9E9E9E;
+}
