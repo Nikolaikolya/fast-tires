@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
+    <PopularProducer />
     <ShopInfo />
     <TheFooter />
   </div>
@@ -9,4 +10,5 @@
 <script lang="ts" setup>
 import TheFooter from "@/components/TheFooter/index.vue";
 import ShopInfo from "@/components/ShopInfo/ShopInfo.vue";
+import PopularProducer from "@/components/PopularProducer/PopularProducer.vue";
 </script>

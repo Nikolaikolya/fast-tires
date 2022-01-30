@@ -1,0 +1,67 @@
+.popular-producer {
+  border-bottom: 1px solid #E7E7E7;
+
+  padding-bottom: 70px;
+}
+
+.popular-producer__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 36px;
+  color: #333333;
+}
+
+.popular-producer-list {
+  margin-left: -5px;
+  margin-right: -5px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 370px) {
+    justify-content: center;
+  }
+}
+
+.popular-producer-list__item {
+  margin: 5px;
+  width: calc(100% / 6 - 10px);
+
+  @media (max-width: 1050px) {
+    width: calc(100% / 4 - 10px);
+  }
+
+  @media (max-width: 690px) {
+    width: calc(100% / 3 - 10px);
+  }
+
+  @media (max-width: 530px) {
+    width: calc(100% / 2 - 10px);
+  }
+
+  @media (max-width: 370px) {
+    max-width: 150px;
+  }
+}
+
+.popular-producer-list__link {
+  height: 84px;
+  max-width: 191px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #F8F8F8;
+  border: 1px solid #E6E9EC;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.popular-producer-list__image {
+  max-width: 191px;
+}
