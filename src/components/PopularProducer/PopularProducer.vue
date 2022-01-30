@@ -5,7 +5,7 @@
       <ul class="popular-producer-list">
         <li
           class="popular-producer-list__item"
-          v-for="(image, index) in imageList"
+          v-for="(image, index) in producersImages"
           :key="index"
         >
           <a href="" class="popular-producer-list__link">
@@ -25,64 +25,7 @@
 
 <script lang="ts" setup>
 import Container from "../Container/index.vue";
-const images = "producer-1.png";
-
-const imageList = [
-  {
-    imageName: "producer-1.png",
-  },
-  {
-    imageName: "producer-2.png",
-  },
-  {
-    imageName: "producer-3.png",
-  },
-  {
-    imageName: "producer-1.png",
-  },
-  {
-    imageName: "producer-2.png",
-  },
-  {
-    imageName: "producer-3.png",
-  },
-  {
-    imageName: "producer-1.png",
-  },
-  {
-    imageName: "producer-2.png",
-  },
-  {
-    imageName: "producer-3.png",
-  },
-  {
-    imageName: "producer-1.png",
-  },
-  {
-    imageName: "producer-2.png",
-  },
-  {
-    imageName: "producer-3.png",
-  },
-  {
-    imageName: "producer-1.png",
-  },
-  {
-    imageName: "producer-2.png",
-  },
-  {
-    imageName: "producer-3.png",
-  },
-  {
-    imageName: "producer-1.png",
-  },
-  {
-    imageName: "producer-2.png",
-  },
-  {
-    imageName: "producer-3.png",
-  },
-];
+import { producersImages } from "@/data/producersImages";
 </script>
 
 <style lang="scss">

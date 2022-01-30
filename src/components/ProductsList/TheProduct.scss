@@ -1,0 +1,17 @@
+.product-card {
+  padding-top: 25px;
+  padding-left: 52px;
+  padding-right: 52px;
+
+  max-width: 278px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__image {
+  max-width: 173px;
+  margin-bottom: 10px;
+}
