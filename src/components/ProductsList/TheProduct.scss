@@ -1,7 +1,5 @@
 .product-card {
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 25px;
 
   max-width: 278px;
 
@@ -9,7 +7,22 @@
 
   display: flex;
   flex-direction: column;
+
+  border: 1px solid #E6E9EC;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: all .2s linear;
+
+  &:hover {
+    box-shadow: 0px 10px 25px rgba(102, 102, 102, 0.1);
+  }
 }
+
+// .product-card:hover>.product-card__button {
+//   display: flex;
+//   justify-content: space-between;
+// }
 
 .product-card__image {
   max-width: 173px;

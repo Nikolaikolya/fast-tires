@@ -1,5 +1,9 @@
 <template>
-  <article class="product-card">
+  <article
+    class="product-card"
+    @mousemove="isShowButton = true"
+    @mouseleave="isShowButton = false"
+  >
     <img class="product-card__image" src="@/assets/images/image7.png" alt="" />
     <StarRating
       class="product-card__rating"
@@ -33,19 +37,26 @@
       Yokohama BluEarth *Winter V905 205 45 R17 88V
     </h3>
 
-    <div class="product-card__button">
-      <p class="product-card__count-product">
-        <button type="button" class="product-card__count-dec"></button>
-        <span class="product-card__count">1</span>
-        <button class="product-card__count-inc"></button>
-      </p>
-      <button class="product-card__add-product" type="button">В корзину</button>
-    </div>
+    <transition name="fade">
+      <div class="product-card__button" v-if="isShowButton">
+        <p class="product-card__count-product">
+          <button type="button" class="product-card__count-dec"></button>
+          <span class="product-card__count">1</span>
+          <button class="product-card__count-inc"></button>
+        </p>
+        <button class="product-card__add-product" type="button">
+          В корзину
+        </button>
+      </div>
+    </transition>
   </article>
 </template>
 
 <script lang="ts" setup>
 import StarRating from "vue-star-rating";
+import { ref } from "vue";
+
+const isShowButton = ref(false);
 </script>
 
 <style lang="scss">
@@ -55,5 +66,15 @@ import StarRating from "vue-star-rating";
   font-size: 14px;
   line-height: 23px;
   color: #333333;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s linear;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
