@@ -8,3 +8,13 @@ export interface IMenuList {
   icon?: MenuIcons;
   type?: LinkType;
 }
+
+export interface IProduct {
+  id: number;
+  count: number;
+  rating: number;
+  title: string;
+  old_price: number;
+  now_price: number;
+  sale: boolean;
+}

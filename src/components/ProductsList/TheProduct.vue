@@ -1,22 +1,31 @@
 <template>
   <article
     class="product-card"
+    :class="{ 'product-card--last-item': product.count === 1 }"
     @mousemove="isShowButton = true"
     @mouseleave="isShowButton = false"
   >
+    <img
+      v-if="product.sale"
+      class="product-card__flame"
+      src="@/assets/images/flame.png"
+      alt=""
+    />
     <img class="product-card__image" src="@/assets/images/image7.png" alt="" />
     <StarRating
       class="product-card__rating"
-      :rating="4"
+      :rating="product.rating"
       active-color="#FADE56"
       inactive-color="#E7E7E7"
       :star-size="18"
       text-class="rating-text"
     />
     <p class="product-card__price">
-      <span class="product-card__price-now">2 500 &#8381;</span>
+      <span class="product-card__price-now"
+        >{{ product.now_price }} &#8381;</span
+      >
       <span class="product-card__price-old"
-        >3200 &#8381;
+        >{{ product.old_price }} &#8381;
         <svg
           class="product-card__price-line"
           width="57"
@@ -34,7 +43,7 @@
     </p>
 
     <h3 class="product-card__title">
-      Yokohama BluEarth *Winter V905 205 45 R17 88V
+      {{ product.title }}
     </h3>
 
     <transition name="fade">
@@ -54,9 +63,17 @@
 
 <script lang="ts" setup>
 import StarRating from "vue-star-rating";
-import { ref } from "vue";
+import { ref, defineProps, PropType } from "vue";
+import { IProduct } from "@/types/types";
 
 const isShowButton = ref(false);
+
+const props = defineProps({
+  product: {
+    type: Object as PropType<IProduct>,
+    required: true,
+  },
+});
 </script>
 
 <style lang="scss">
